@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F4CF14C1E2FDAB1003BD643 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4CF14B1E2FDAB1003BD643 /* main.swift */; };
+		3F4CF1531E2FDC75003BD643 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4CF1521E2FDC75003BD643 /* GameBoard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		3F4CF1481E2FDAB1003BD643 /* BattleShip */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BattleShip; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4CF14B1E2FDAB1003BD643 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3F4CF1521E2FDC75003BD643 /* GameBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				3F4CF14B1E2FDAB1003BD643 /* main.swift */,
+				3F4CF1521E2FDC75003BD643 /* GameBoard.swift */,
 			);
 			path = BattleShip;
 			sourceTree = "<group>";
@@ -120,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4CF1531E2FDC75003BD643 /* GameBoard.swift in Sources */,
 				3F4CF14C1E2FDAB1003BD643 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
