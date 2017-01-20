@@ -70,18 +70,34 @@ class GameBoard {
     }
     
     func setupPosition() {
-        for i in 1...shipAmount {
+        for i in 1...shipAmount-6 {
             print("Please input your ship position you have \(shipAmount-i) left.(Use the grid, example(A4)): ", terminator:"")
+            
+            var xVal = 0
+            var yVal = 0
+            
             if let input : String = readLine() {
                 for value in input.characters {
                     var newVal  = String(value)
                     //var newVal : Int = Int(value)
-                    
-                    
+                    for letter in alpComapare {
+                        if newVal == letter.key {
+                            xVal = letter.value
+                        }
+                        if  String(newVal) == String(letter.value)  {
+                            yVal = Int(newVal)! - 1
+                            
+                        }
+                    }
                 }
             }
+            shipPosition[xVal][yVal] = true
+            print("X value: \(xVal), Y value:  : \(yVal)")
         }
+        
     }
 }
+
+
 
 

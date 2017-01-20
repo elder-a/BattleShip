@@ -21,3 +21,4 @@ var playerBoard = GameBoard()
 
 playerBoard.drawBoard()
 playerBoard.setupPosition()
+playerBoard.drawBoard()
