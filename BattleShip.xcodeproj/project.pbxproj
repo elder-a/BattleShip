@@ -254,6 +254,7 @@
 				3F4CF1511E2FDAB1003BD643 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

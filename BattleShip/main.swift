@@ -10,7 +10,7 @@ import Foundation
 
 
 
-print("BattleShip")
+print("    BattleShip")
 
 //-Create a class that models the board of the game 
 //-Make sure that you can change the board with funciton to add ships or destory them 
@@ -19,5 +19,5 @@ print("BattleShip")
 var playerBoard = GameBoard()
 
 
-
+playerBoard.drawBoard()
 
