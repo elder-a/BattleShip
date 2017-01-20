@@ -31,6 +31,7 @@ class GameBoard {
     var shipRow : [Bool] = []
     var shipPosition : [[Bool]] = []
     var alp : [String] = ["A","B","C","D","E","F","G","H"]
+    var alpComapare: [String: Int] = ["A" : 1,"B" : 2,"C" : 3,"D" : 4,"E" : 5,"F" : 6,"G" : 7,"H" : 8]
     
     init() {
         for _ in 1...squareSize {
@@ -39,9 +40,6 @@ class GameBoard {
         for _ in 1...squareSize+1 {
             shipPosition.append(shipRow)
         }
-        //print(shipPosition)
-        //shipPosition[0][1] =
-        //print(shipPosition[0][1])
     }
     
     
@@ -65,21 +63,25 @@ class GameBoard {
                 if j == 7 {
                     print("|", terminator:"")
                 }
-              
+                
             }
-              print("")
+            print("")
         }
     }
     
     func setupPosition() {
         for i in 1...shipAmount {
-            print("Please input your ship position you have \(shipAmount-i) left.")
+            print("Please input your ship position you have \(shipAmount-i) left.(Use the grid, example(A4)): ", terminator:"")
             if let input : String = readLine() {
-                
-                
+                for value in input.characters {
+                    var newVal  = String(value)
+                    //var newVal : Int = Int(value)
+                    
+                    
+                }
             }
         }
     }
-    
 }
+
 
