@@ -21,12 +21,12 @@ class GameBoard {
     // G | | | | | | | | |
     // H | | | | | | | | |
     //
-    // I need on array (2D) to hole weather there is a ship there
-    // I need another array
+    // √ I need on array (2D) to hole weather there is a ship there
+    //
     
     
     
-    var shipAmount : Int = 8
+    var shipAmount : Int = 4
     var squareSize : Int = 8
     var shipRow : [Bool] = []
     var shipPosition : [[Bool]] = []
@@ -70,8 +70,8 @@ class GameBoard {
     }
     
     func setupPosition() {
-        for i in 1...shipAmount-6 {
-            print("Please input your ship position you have \(shipAmount-i) left.(Use the grid, example(A4)): ", terminator:"")
+        for i in 1...shipAmount {
+            print("Please input your ship position you have \(shipAmount-i-1) left.(Use the grid, example(A4)): ", terminator:"")
             
             var xVal = 0
             var yVal = 0
@@ -94,8 +94,15 @@ class GameBoard {
             shipPosition[xVal][yVal] = true
             print("X value: \(xVal), Y value:  : \(yVal)")
         }
-        
     }
+    func randomSetup() {
+        for _ in 1...shipAmount {
+            let xVal : Int = Int(arc4random_uniform(8)) // [0, 7]
+            let yVal : Int = Int(arc4random_uniform(8)) // [0, 7]
+            shipPosition[xVal][yVal] = true
+        }
+    }
+    
 }
 
 

@@ -12,13 +12,15 @@ import Foundation
 
 print("    BattleShip")
 
-//-Create a class that models the board of the game 
-//-Make sure that you can change the board with funciton to add ships or destory them 
-//-Add in command line functioality
+// √ Create a class that models the board of the game
+// √ Make sure that you can change the board by adding ships
+// - Add in one game board for your ships and one for the enemy (Use boolean values to change the Class?)
+// - Create a tracking system so that when on player takes a you know where he went 
 
 var playerBoard = GameBoard()
-
+var computerBoard = GameBoard()
 
 playerBoard.drawBoard()
-playerBoard.setupPosition()
+playerBoard.randomSetup()
+//playerBoard.setupPosition()
 playerBoard.drawBoard()
