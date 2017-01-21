@@ -26,7 +26,7 @@ class GameBoard {
     
     
     
-    var shipAmount : Int = 4
+    var shipAmount : Int = 10
     var squareSize : Int = 8
     var shipRow : [Bool] = []
     var shipPosition : [[Bool]] = []
@@ -45,7 +45,7 @@ class GameBoard {
     
     
     func drawBoard () { //Change later so it draws ships
-        print("  --\(boardName)--")
+        print("--\(boardName)--")
         print("  ", terminator:"")
         
         for i in 1...squareSize {
@@ -71,7 +71,7 @@ class GameBoard {
     }
     
     func drawTarget () { //Change later so it draws ships
-        print("  --\(boardName)--")
+        print("--\(boardName)--")
         print("  ", terminator:"")
         
         for i in 1...squareSize {
@@ -129,10 +129,17 @@ class GameBoard {
             shipPosition[xVal][yVal] = true
         }
     }
+    func randomFire() {
+        //for _ in 1...1000 {
+            let xVal : Int = Int(arc4random_uniform(8)) // [0, 7]
+            let yVal : Int = Int(arc4random_uniform(8)) // [0, 7]
+            shipPosition[xVal][yVal] = false
+        //}
+    }
     func fireOnMyShip(){
         var xVal = 0
         var yVal = 0
-        print("Put in coordinites to fire ex.(A4)")
+        print("Put in coordinites to fire ex.(A4): ", terminator: "")
         if let input : String = readLine() {
             for value in input.characters {
                 let newVal  = String(value)
@@ -149,7 +156,7 @@ class GameBoard {
             }
         }
         shipPosition[xVal][yVal] = true
-        print("X value: \(xVal), Y value:  : \(yVal)")
+        //print("X value: \(xVal), Y value:  : \(yVal)")
     }
 }
 
