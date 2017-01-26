@@ -26,7 +26,7 @@ class GameBoard {
     
     
     
-    var shipAmount : Int = 10
+    var shipAmount : Int = 6
     var squareSize : Int = 8
     var shipRow : [Bool] = []
     var shipPosition : [[Bool]] = []
@@ -133,7 +133,10 @@ class GameBoard {
         //for _ in 1...1000 {
             let xVal : Int = Int(arc4random_uniform(8)) // [0, 7]
             let yVal : Int = Int(arc4random_uniform(8)) // [0, 7]
-            shipPosition[xVal][yVal] = false
+            if shipPosition[xVal][yVal] { //MAKE SURE TO CHANGE OTHER ONE!!!
+                print("Computer HIT!")
+                shipPosition[xVal][yVal] = false
+            }
         //}
     }
     func fireOnMyShip(){
@@ -155,6 +158,7 @@ class GameBoard {
                 }
             }
         }
+        
         shipPosition[xVal][yVal] = true
         //print("X value: \(xVal), Y value:  : \(yVal)")
     }

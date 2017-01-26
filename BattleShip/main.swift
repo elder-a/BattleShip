@@ -6,6 +6,7 @@
 //  Copyright © 2017 Andy-E. All rights reserved.
 //
 
+
 import Foundation
 
 // √ Create a class that models the board of the game
@@ -21,10 +22,15 @@ var computerBoard = GameBoard(boardName : "Computer Board")
 
 
 
+
 //Mark: Game Setup
 print("    BattleShip")
 print("")
-//playerBoard.drawBoard()
+print("The X charicter repersent water")
+print("The O charicter repersent ships")
+print("The @ charicter are places you have not fired")
+print("The + charicter are places you have fired")
+playerBoard.drawBoard()
 playerBoard.randomSetup()
 //playerBoard.setupPosition()
 
@@ -53,6 +59,9 @@ func checkBoard(p1 : [[Bool]], p2: [[Bool]]) -> [[Bool]]{ //turn the thing false
             
             if p1[col][row] == true {
                 if p1[col][row] == p2[col][row] {
+                    print("")
+                    print("HIT!!")
+                    print("")
                     finalA[col][row] = false
                     break
                     //p2[col][row] = false
@@ -81,7 +90,7 @@ func endGame(p1 : [[Bool]]) -> Bool{ //turn the thing false if its been hit
 }
 
 //func automateTurn(){
-    
+
 //}
 
 
@@ -115,6 +124,7 @@ for i in 1...1000 {
     //computerBoard.drawBoard()
     playerBoard.randomFire() //turns a rand square false
     playerBoard.drawBoard()
+    //computerBoard.drawBoard()
     
     
 }
